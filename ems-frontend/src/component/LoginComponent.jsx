@@ -18,7 +18,7 @@ function LoginComponent() {
         setError("");
         setLoading(true);
 
-        axios.post("http://localhost:8080/auth/login", {
+        axios.post("https://employee-management-system-ks05.onrender.com/auth/login", {
             username,
             password
         })

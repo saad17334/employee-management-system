@@ -15,16 +15,22 @@ function SignupComponent() {
 
     const handleSignup = (e) => {
         e.preventDefault();
+
         setError("");
         setLoading(true);
 
-        axios.post("http://localhost:8080/auth/signup", {
-            username,
-            password,
-            role
-        })
+        axios.post(
+            "https://employee-management-system-ks05.onrender.com/auth/signup",
+            {
+                username,
+                password,
+                role
+            }
+        )
             .then((response) => {
+
                 localStorage.setItem("token", response.data.token);
+
                 navigate("/emplist");
             })
             .catch(() => {
