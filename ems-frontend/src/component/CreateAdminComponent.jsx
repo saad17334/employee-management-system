@@ -15,7 +15,7 @@ function CreateAdminComponent() {
 
         const token = localStorage.getItem("token");
 
-        axios.post("http://localhost:8080/admin/create-admin",
+        axios.post("https://employee-management-system-ks05.onrender.com/admin/create-admin",
             { username, password },
             {
                 headers: {
