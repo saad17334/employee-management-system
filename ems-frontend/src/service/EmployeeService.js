@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 🔐 Axios instance
 const API = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "https://employee-management-system-ks05.onrender.com",
     headers: {
         "Content-Type": "application/json"
     }
