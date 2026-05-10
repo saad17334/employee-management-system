@@ -16,7 +16,7 @@ public class CorsConfig {
 
         config.setAllowedOrigins(List.of(
                 "http://localhost:5173",
-                "https://employee-management-system-nine-eta.vercel.app"
+                "https://employee-management-system-iota-neon.vercel.app"
         ));
 
         config.setAllowedMethods(List.of(
