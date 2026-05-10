@@ -27,8 +27,14 @@ function CreateAdminComponent() {
                 setMessage("✅ Admin created successfully");
                 setTimeout(() => navigate("/emplist"), 1500);
             })
-            .catch(() => {
-                setMessage("❌ Failed to create admin");
+            .catch((error) => {
+                if (error.response?.status === 409) {
+                    setMessage("❌ Username already exists");
+                } else if (error.response?.status === 403) {
+                    setMessage("❌ Only ADMIN can create admins");
+                } else {
+                    setMessage("❌ Something went wrong");
+                }
             });
     };
 
